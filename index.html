@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="us-en">
+
+<head>
+  <meta cahrset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+  	<div class="row">
+
+  		<h1 class="col-md-12 text-center">Hangman Game</h1>
+        <br>
+
+        <!-- Instructions and reveal button on the splash screen -->
+        <div class="row">
+          <div class="col-xs-1 col-md-4"></div>
+  		     <p class="col-xs-10 col-md-4 text-justify" id="introText">
+              This is a game of Hangman! A random word will be generated, and you have to guess what is it is. Press the key of the letter you want to guess, if that letter is in the word, it will appear in the "Current Word: " line. If it is not, your guess will be logged in the "Letter Already Guessed: " line, and your "Number of Guesses Remaining: " will be subtracted by one. When you run out of guesses by reaching zero, a loss will be marked and a new letter will be created. You will not be able to guess the same letter twice. If you guess the word correctly, by filling in all of the letters, a win will be marked and a new word will be generated.
+            </p>
+          <div class="col-xs-1 col-md-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 col-md-5"></div>
+  	        <a id="revealButton" class="col-xs-8 col-md-2 text-center" class="hvr-border-fade" onclick="changeClass()">Click Here to Begin</a>
+          <div class="col-xs-2 col-md-5"></div>
+        </div>
+
+        <!-- The game body where game data is shown for the player -->
+  			<section id="gameContent" class="hideContent">
+  			  <p class="col-xs-6 text-right">Wins: </p>
+  			  <p class="col-xs-6 text-left">0</p>
+  			  <p class="col-xs-6 text-right">Current Word:</p>
+  			  <p class="col-xs-6 text-left">S _ M P _ _</p>
+  			  <p class="col-xs-6 text-right">Number of Guesses Remaining:</p>
+  			  <p class="col-xs-6 text-left"> 5 </p>
+  			  <p class="col-xs-6 text-right">Letters Already Guessed:</p>
+  			  <p class="col-xs-6 text-left"> . </p>
+  			</section>
+
+	  </div>
+  </div>
+
+  <script>
+  </script>
+
+</body>
+
+</html>
